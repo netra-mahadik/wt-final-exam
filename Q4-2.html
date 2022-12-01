@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function capitalizeFirstLetter(str) {
+            const strArr = str.split(" ");
+            for (let i = 0; i < strArr.length; i++) {
+                strArr[i] = strArr[i].charAt(0).toUpperCase() + strArr[i].slice(1);
+            }
+            const str2 = strArr.join(" ");
+            document.getElementById("result").innerHTML = str2;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="">Enter a string:</label>
+    <input type="text" id="str">
+    <br><br>
+    <input type="submit" value="Capitalize" onclick="capitalizeFirstLetter(document.getElementById('str').value)">
+    <p id="result"></p>
+</body>
+
+</html>

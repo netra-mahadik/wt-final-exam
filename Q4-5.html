@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function sortAsc() {
+            let prices = document.getElementById("prices").value;
+            let pricesArr = prices.split(",");
+            let priceAscArr = pricesArr.sort(function (a, b) { return a - b });
+            document.getElementById("asc").innerHTML = priceAscArr;
+        }
+        function sortDesc() {
+            let prices = document.getElementById("prices").value;
+            let pricesArr = prices.split(",");
+            let priceAscArr = pricesArr.sort(function (a, b) { return b - a });
+            document.getElementById("asc").innerHTML = priceAscArr;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="">Enter prices:</label>
+    <input type="text" id="prices" placeholder="1,5,2">
+    <br><br>
+    <input type="submit" value="Sort in Ascending Order" onclick="sortAsc()">
+    <br><br>
+    <input type="submit" value="Sort in Descending Order" onclick="sortDesc()">
+    <p id="asc"></p>
+    <p id="desc"></p>
+</body>
+
+</html>
